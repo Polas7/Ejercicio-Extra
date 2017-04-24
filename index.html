@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Convertir Celcius a Fahrenhet</h1>
+<p>Inserta numeros en grados Celsius</p>
+<p><input id="celsius"> Grados Celsius</p>
+<p><input id="farenheit"> Grados Farenheit</p> 
+
+<script>
+function convertirCelsius(grados) {
+    var operacion;
+    if (grados == "celsius") {
+        operacion = document.getElementById("celsius").value  *9/ 5 + 32;
+        document.getElementById("farenheit").value = Math.round(operacion);
+    } else {
+        operacion = (document.getElementById("farenheit").value -32) * 5 / 9;
+        document.getElementById("celsius").value = Math.round(operacion);
+    }
+}
+</script>
+<Script src="codigo.js"></Script>
+<button type="button" onclick="convertirCelsius(); return false">Convertir a Celsius</button>
+</body>
+</html>
+
